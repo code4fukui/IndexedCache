@@ -1,12 +1,12 @@
 import { IndexedDB } from "https://code4fukui.github.io/IndexedDB/IndexedDB.js";
 
-export class Cache {
+export class IndexedCache {
   constructor(db) {
     this.db = db;
   }
   static async create(dbname = "cache", dbver = 1) {
     const db = await IndexedDB.create(dbname, ["url", "data"], dbver);
-    return new Cache(db);
+    return new IndexedCache(db);
   }
   async fetchOrLoad(url) {
     const res = await this.db.get("url", url);
@@ -26,18 +26,17 @@ export class Cache {
 }
 
 let cache = null;
+export const getDefaultCache = async () => {
+  if (!cache) {
+    cache = await IndexedCache.create();
+  }
+  return cache;
+};
 
 export const fetchOrLoad = async (url) => {
-  if (!cache) {
-    cache = await Cache.create();
-  }
-  const bin = await cache.fetchOrLoad(url);
-  return bin;
+  return await getDefaultCache().fetchOrLoad(url);
 };
 
 export const clearCache = async () => {
-  if (!cache) {
-    cache = await Cache.create();
-  }
-  await cache.clear();
+  await getDefaultCache.clear();
 };
