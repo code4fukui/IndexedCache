@@ -1,6 +1,12 @@
 # IndexedCache.js
 
-Webアプリのためのキャッシュライブラリ [IndexedDB](https://github.com/code4fukui/IndexedDB) を使用しています。
+Webアプリのキャッシュライブラリです。[IndexedDB](https://github.com/code4fukui/IndexedDB)を使ってデータをキャッシュします。
+
+## 機能
+- IndexedDBを使ってデータをキャッシュ
+- 自動的にデータをフェッチして保存
+- `fetchOrLoad`関数で簡単にデータにアクセス
+- キャッシュのクリアが可能
 
 ## 使い方
 
@@ -20,17 +26,8 @@ const bin = await cache.fetchOrLoad("./somedata.bin");
 await cache.clear();
 ```
 
-## 機能
-
-- IndexedDBを使ってデータをキャッシュ
-- 自動的にデータをフェッチして保存
-- `fetchOrLoad`関数で簡単にアクセス
-- キャッシュのクリアが可能
-
 ## 必要環境
-
 このライブラリはIndexedDBをサポートしているブラウザが必要です。
 
 ## ライセンス
-
 MIT License

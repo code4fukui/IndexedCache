@@ -1,6 +1,8 @@
 # IndexedCache.js
 
-a cache lib for WebApps with [IndexedDB](https://github.com/code4fukui/IndexedDB)
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+A cache library for web applications that uses [IndexedDB](https://github.com/code4fukui/IndexedDB).
 
 ## Features
 - Caching data using IndexedDB
