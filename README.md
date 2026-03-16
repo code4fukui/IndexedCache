@@ -31,4 +31,4 @@ await cache.clear();
 ```
 
 ## License
-MIT License
+MIT License — see [LICENSE](LICENSE).

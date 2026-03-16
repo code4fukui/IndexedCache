@@ -1,6 +1,6 @@
 # IndexedCache.js
 
-Webアプリのキャッシュライブラリです。[IndexedDB](https://github.com/code4fukui/IndexedDB)を使ってデータをキャッシュします。
+Webアプリケーションのためのキャッシュライブラリです。[IndexedDB](https://github.com/code4fukui/IndexedDB)を使ってデータをキャッシュします。
 
 ## 機能
 - IndexedDBを使ってデータをキャッシュ
@@ -9,7 +9,6 @@ Webアプリのキャッシュライブラリです。[IndexedDB](https://github
 - キャッシュのクリアが可能
 
 ## 使い方
-
 ```js
 import { fetchOrLoad } from "https://code4fukui.github.io/IndexedCache/IndexedCache.js";
 
